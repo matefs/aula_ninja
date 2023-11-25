@@ -1,3 +1,4 @@
+# https://www.youtube.com/watch?v=jMDWdh1zhf4&ab_channel=pythonando
 from django.urls import path
 from ninja import NinjaAPI
 
