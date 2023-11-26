@@ -1,14 +1,9 @@
 # https://www.youtube.com/watch?v=jMDWdh1zhf4&ab_channel=pythonando
-from django.urls import path
-from ninja import NinjaAPI
+from django.contrib import admin
+from django.urls import path, include
 
-api = NinjaAPI()
-
-@api.get("/livro")
-def get_livro(request):
-    # Replace 'return 1' with the actual logic to retrieve and return livro data
-    return 'lsakjdçlfjalsçd'
 
 urlpatterns = [
-    path("api/", api.urls),
+    path('admin/',admin.site.urls),
+    path("cadastro/",include('cadastro.urls'))
 ]
