@@ -8,3 +8,4 @@ aula django ninja youtube
 ### Rotas: 
 
 - `http://127.0.0.1:8000/cadastro/api/livro/` -> listar todos livros cadastrados 
+- `http://127.0.0.1:8000/admin/cadastro/livro/` -> acesso admin 
