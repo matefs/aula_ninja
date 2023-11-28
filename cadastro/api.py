@@ -1,4 +1,4 @@
-from ninja import NinjaAPI
+from ninja import NinjaAPI, Schema
 from .models import Livro
 from django.shortcuts import get_object_or_404
 from django.forms.models import model_to_dict
@@ -23,3 +23,17 @@ def listar_consultar(request, id: int = 1 ):
     livro = get_object_or_404(Livro,id=id) 
     livro = model_to_dict(livro) 
     return livro 
+
+
+class LivroSchema(Schema):
+    titulo: str
+    descricao: str
+    autor: str = None
+
+@api.post('livro', response=LivroSchema)
+def livro_criar(request, livro: LivroSchema):
+    l1 = livro.dict()
+    livro = Livro(**l1)
+    livro.save()
+    return livro
+
