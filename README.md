@@ -10,4 +10,4 @@ Aula django ninja youtube
 - `http://127.0.0.1:8000/admin/cadastro/livro/` -> acesso admin 
 
 ### references: 
-- Youtube tutorial: `https://www.youtube.com/watch?v=jMDWdh1zhf4&ab_channel=pythonando`
+- Youtube tutorial: https://www.youtube.com/watch?v=jMDWdh1zhf4&ab_channel=pythonando 
