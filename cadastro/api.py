@@ -17,4 +17,9 @@ def listar_livro(request,id: int):
     livro = get_object_or_404(Livro,id=id) 
     livro = model_to_dict(livro) 
     return livro 
-   
+
+@api.get('livro_consulta/')
+def listar_consultar(request, id: int = 1 ):
+    livro = get_object_or_404(Livro,id=id) 
+    livro = model_to_dict(livro) 
+    return livro 
