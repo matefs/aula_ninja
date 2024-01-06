@@ -13,3 +13,5 @@ class Command(BaseCommand):
                 self.stdout.write(f"- {book}")
         else:
             self.stdout.write("No books found in the database.")
+
+
