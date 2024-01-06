@@ -5,7 +5,7 @@ class Command(BaseCommand):
     help = "Get all books from the database"
 
     def handle(self, *args, **options):
-        books = Livro.objects.all()
+        books = Livro.objects.filter(id__gt=1)
 
         if books:
             self.stdout.write("List of all books:")
